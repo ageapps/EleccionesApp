@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="es.ageapps.eleccionesapp">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <!--
+      IMPORTANT: Change "com.parse.starter.permission.C2D_MESSAGE" in the lines below
+      to match your app's package name + ".permission.C2D_MESSAGE".
+    -->
+    <permission
+        android:name="es.ageapps.eleccionesapp.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="es.ageapps.eleccionesapp.permission.C2D_MESSAGE" />
+
+    <application
+        android:name=".EleccionesApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.RicoPaRico">
+
+        <!-- This meta-data tag is required to use Google Play Services. -->
+
+        <activity
+            android:name=".ui.ActividadPrincipal"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.ConNavigationDrawer">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.ActividadDetalle"
+            android:label="Candidato"
+            android:parentActivityName=".ui.ActividadPrincipal">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="es.ageapps.eleccionesapp.ui.ActividadPrincipal" />
+        </activity>
+
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="ab3b183560f699d7d00a4547e8a5130ef1cf134f" />
+
+        <activity
+            android:name=".ui.ActividadSondeo"
+            android:label="Sondeo"
+            android:parentActivityName=".ui.ActividadPrincipal"
+            android:theme="@style/Theme.RicoPaRico">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="es.ageapps.eleccionesapp.ui.ActividadPrincipal" />
+        </activity>
+        <activity
+            android:name=".ui.ActividadSondeoComunidades"
+            android:label="@string/title_activity_actividad_sondeo_comunidades"
+            android:parentActivityName=".ui.ActividadPrincipal"
+            android:theme="@style/Theme.RicoPaRico">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="es.ageapps.eleccionesapp.ui.ActividadPrincipal" />
+        </activity>
+        <activity
+            android:name=".ui.ActividadVotosUsuarios"
+            android:label="Votos de Usuarios"
+            android:parentActivityName=".ui.ActividadPrincipal"
+            android:theme="@style/Theme.RicoPaRico">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="es.ageapps.eleccionesapp.ui.ActividadPrincipal" />
+        </activity>
+        <activity
+            android:name=".ui.ActividadAcercaDe"
+            android:label="@string/title_activity_actividad_acerca_de"
+            android:parentActivityName=".ui.ActividadPrincipal"
+            android:theme="@style/Theme.RicoPaRico">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="es.ageapps.eleccionesapp.ui.ActividadPrincipal" />
+        </activity>
+
+        <service android:name="com.parse.PushService" />
+
+        <receiver
+            android:name="com.parse.ParsePushBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.parse.push.intent.RECEIVE" />
+                <action android:name="com.parse.push.intent.DELETE" />
+                <action android:name="com.parse.push.intent.OPEN" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.parse.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <!-- IMPORTANT: Change "com.parse.starter" to match your app's package name. -->
+                <category android:name="es.ageapps.eleccionesapp" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".ui.ActividadWeb"
+            android:label="@string/title_activity_actividad_web"
+            android:parentActivityName=".ui.ActividadPrincipal"
+            android:theme="@style/Theme.RicoPaRico">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="es.ageapps.eleccionesapp.ui.ActividadPrincipal" />
+        </activity>
+        <activity
+            android:name=".ui.ActividadProvincias"
+            android:label="@string/title_activity_actividad_comunidades"
+            android:parentActivityName=".ui.ActividadPrincipal"
+            android:theme="@style/Theme.RicoPaRico">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="es.ageapps.eleccionesapp.ui.ActividadPrincipal" />
+        </activity>
+
+        <meta-data
+            android:name="com.parse.push.notification_icon"
+            android:resource="@drawable/logoappelecciones_push" />
+
+        <activity
+            android:name=".ui.ActividadContainer"
+            android:label="@string/title_activity_actividad_pager"
+            android:parentActivityName=".ui.ActividadPrincipal"
+            android:theme="@style/Theme.RicoPaRico">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="es.ageapps.eleccionesapp.ui.ActividadPrincipal" />
+        </activity>
+        <activity
+            android:name=".ui.ActividadTest"
+            android:label="@string/title_activity_actividad_pager"
+            android:parentActivityName=".ui.ActividadPrincipal"
+            android:theme="@style/Theme.RicoPaRico">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="es.ageapps.eleccionesapp.ui.ActividadPrincipal" />
+        </activity>
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.adindk.euafni261961.AdActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent" />
+
+        <activity
+            android:name="com.adindk.euafni261961.BrowserActivity"
+            android:configChanges="orientation|screenSize" />
+
+    </application>
+
+</manifest>

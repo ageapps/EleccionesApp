@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_fondo"
+    android:orientation="vertical">
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/card_margin"
+        card_view:cardCornerRadius="@dimen/card_corner"
+        card_view:cardUseCompatPadding="true">
+        <TextView
+            android:id="@+id/cuenta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|top"
+            android:text=""
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            android:textColor="@color/primaryColor" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/chart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <com.github.clans.fab.FloatingActionMenu
+                android:id="@+id/menu2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="end|bottom"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp"
+                fab:menu_animationDelayPerItem="0"
+                fab:menu_colorNormal="@color/primaryDarkColor"
+                fab:menu_colorPressed="@color/colorCandidatos"
+                fab:menu_colorRipple="@color/accentColor"
+                fab:menu_labels_hideAnimation="@anim/jump_to_down"
+                fab:menu_labels_showAnimation="@anim/jump_from_down"
+                fab:menu_labels_style="@style/MenuLabelsStyle"
+                fab:menu_shadowColor="#444">
+
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/fab_sondeo"
+                    style="@style/MenuButtonsStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_event_available_white_24dp"
+                    fab:fab_label="Sondeo" />
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/fab_antisondeo"
+                    style="@style/MenuButtonsStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_event_busy_white_24dp"
+                    fab:fab_label="AntiSondeo" />
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/fab_votos"
+                    style="@style/MenuButtonsStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_person_white_24dp"
+                    fab:fab_label="Votos de usuarios" />
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/fab_comunidades"
+                    style="@style/MenuButtonsStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_location_on_white_24dp"
+                    fab:fab_label="Comunidades" />
+
+            </com.github.clans.fab.FloatingActionMenu>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

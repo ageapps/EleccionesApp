@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="window_background">#ffffff</color>
+    <color name="color_fondo">#d4d4ed</color>
+    <color name="primaryDarkColor">#2A2B39</color>
+    <color name="primaryColor">#37384E</color>
+    <color name="accentColor">#CCBAFF</color>
+    <color name="colorCandidatos">#5952A5</color>
+
+    <color name="background_footer_item_grid_categorias">#1EC7FB</color>
+    <color name="text_color">#31D1F1</color>
+    <color name="color_light">#ffffff</color>
+
+    <color name="background_header_seccion_inicio">#6A81CC</color>
+    <color name="color_podemos">#5b1256</color>
+    <color name="color_pp">#00a0df</color>
+    <color name="color_psoe">#ef1920</color>
+    <color name="color_iu">#25CA49</color>
+    <color name="color_up">#e5007d</color>
+    <color name="color_c">#eb6a26</color>
+
+
+
+</resources>
+

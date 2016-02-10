@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/item_inicio"
+            android:checked="true"
+            android:icon="@drawable/ic_home_black_48dp"
+            android:title="Inicio" />
+        <item
+            android:id="@+id/item_noticias"
+            android:icon="@drawable/ic_event_note_black_48dp"
+            android:title="Noticias" />
+        <item
+            android:id="@+id/item_partidos"
+            android:icon="@drawable/ic_people_outline_black_24dp"
+            android:title="Partidos" />
+        <item
+            android:id="@+id/item_sondeos"
+            android:icon="@drawable/ic_poll_black_24dp"
+            android:title="Sondeos" />
+        <item
+            android:id="@+id/item_resultados"
+            android:icon="@drawable/ic_equalizer_black_24dp"
+            android:title="Resultados" />
+        <item
+            android:id="@+id/item_informacion"
+            android:icon="@android:drawable/ic_menu_help"
+            android:title="Información" />
+
+        <item
+            android:id="@+id/item_participa"
+            android:icon="@android:drawable/ic_input_add"
+            android:title="Participa" />
+
+        <item
+            android:id="@+id/item_compartir"
+            android:icon="@android:drawable/ic_menu_share"
+            android:title="Compartir" />
+
+    </group>
+</menu>

@@ -1,0 +1,54 @@
+<resources>
+
+    <style name="Theme.RicoPaRico" parent="Base.AppTheme" />
+
+    <style name="Base.AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
+        <item name="colorAccent">@color/accentColor</item>
+
+        <item name="android:windowBackground">@color/window_background</item>
+    </style>
+
+    <style name="Theme.ConNavigationDrawer" parent="Base.AppTheme" />
+
+    <style name="letraDetalle" parent="@android:style/TextAppearance.Medium">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_light</item>
+        <item name="android:textSize">20dp</item>
+    </style>
+
+    <style name="Widget.CardContent" parent="android:Widget">
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingTop">24dp</item>
+        <item name="android:paddingBottom">24dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="Theme.RicoPaRico.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.RicoPaRico.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="MenuButtonsStyle">
+        <item name="fab_size">mini</item>
+        <item name="fab_showAnimation">@anim/jump_from_down</item>
+        <item name="fab_hideAnimation">@anim/jump_to_down</item>
+        <item name="fab_shadowColor">#444</item>
+        <item name="fab_colorNormal">@color/primaryDarkColor</item>
+        <item name="fab_colorPressed">@color/colorCandidatos</item>
+        <item name="fab_colorRipple">@color/accentColor</item>
+    </style>
+    <style name="CardButtonsStyle">
+        <item name="fab_shadowColor">#444</item>
+        <item name="fab_colorNormal">@color/color_light</item>
+        <item name="fab_colorPressed">@color/colorCandidatos</item>
+    </style>
+    <style name="MenuLabelsStyle">
+        <item name="android:background">@drawable/fab_label_background</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+</resources>

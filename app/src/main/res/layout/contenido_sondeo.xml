@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/espacio_norma_1">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/titulo_elige_partido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/espacio_norma_2"
+            android:paddingBottom="@dimen/espacio_norma_2"
+            android:paddingTop="@dimen/espacio_norma_1"
+            android:text="Elige el partido que te gustaria que ganara:"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardCornerRadius="@dimen/card_corner"
+            card_view:cardUseCompatPadding="true">
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="@dimen/espacio_norma_1">
+
+
+                <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp">
+                    <TableRow>
+                        <ImageView
+                            android:layout_marginBottom="5dp"
+                            android:src="@drawable/logo_pp"/>
+                    </TableRow>
+                    <TableRow>
+                        <ImageView
+                            android:layout_marginBottom="5dp"
+                            android:src="@drawable/logo_psoe"/>
+                    </TableRow>
+                    <TableRow>
+                        <ImageView
+                            android:layout_marginBottom="5dp"
+                            android:src="@drawable/logo_c"/>
+                    </TableRow>
+                    <TableRow>
+                        <ImageView
+                            android:layout_marginBottom="5dp"
+                            android:src="@drawable/logo_podemos"/>
+                    </TableRow>
+                    <TableRow>
+                        <ImageView
+                            android:layout_marginBottom="5dp"
+                            android:src="@drawable/logo_upyd"/>
+                    </TableRow>
+                    <TableRow>
+                        <ImageView
+                            android:layout_marginBottom="5dp"
+                            android:src="@drawable/logo_iu"/>
+                    </TableRow>
+                </TableLayout>
+                <RadioGroup
+                    android:id="@+id/radioPartido"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <RadioButton
+                        android:id="@+id/radioButtonPP"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:checked="false"
+                        android:text="PP"
+                        android:textSize="20dp" />
+
+
+                    <RadioButton
+                        android:id="@+id/radioButtonPSOE"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:layout_marginBottom="5dp"
+                        android:text="PSOE"
+                        android:textSize="20dp" />
+
+
+                    <RadioButton
+                        android:id="@+id/radioButtonCs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:layout_marginBottom="5dp"
+                        android:text="Ciudadanos"
+                        android:textSize="20dp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonP"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="Podemos"
+                        android:layout_marginBottom="5dp"
+                        android:textSize="20dp" />
+
+
+                    <RadioButton
+                        android:id="@+id/radioButtonUP"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:layout_marginBottom="5dp"
+                        android:text="UPyD"
+                        android:textSize="20dp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonIU"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:checked="false"
+                        android:text="IU"
+                        android:textSize="20dp" />
+                    <RadioButton
+                        android:id="@+id/radioButtonOtro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:checked="false"
+                        android:text="Otro"
+                        android:textSize="20dp" />
+
+                </RadioGroup>
+
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/espacio_norma_2"
+                android:paddingTop="@dimen/espacio_norma_1"
+                android:text="Elige tu Comunidad Autónoma*"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="@dimen/card_corner"
+                card_view:cardUseCompatPadding="true">
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="@dimen/espacio_norma_1">
+
+                    <Spinner
+                        android:id="@+id/spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:prompt="@string/spinner_promt"
+                        android:layout_gravity="center_horizontal"
+                        android:spinnerMode="dropdown" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="*Opcional"
+                android:textSize="15dp" />
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="El recuento general del sondeo y del antisondeo se pueden observar en el apartado Sondeos/Usuarios."
+                android:textSize="15dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
